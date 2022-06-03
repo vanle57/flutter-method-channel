@@ -404,7 +404,7 @@ final appFlavor = await FlavorConfig().getFlavor();
 print(appFlavor?.apiURL);
 ```
 
-Run và xem **kết quả** thôi!
+Run và xem **kết quả** thôi! (Mình build trên iOS nha)
 
 ![9](https://github.com/vanle57/flutter-method-channel/blob/main/images/9.png)
 
