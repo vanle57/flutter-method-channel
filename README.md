@@ -406,7 +406,7 @@ print(appFlavor?.apiURL);
 
 Run và xem **kết quả** thôi!
 
-![9](https://github.com/vanle57/flutter-method-channel/blob/main/images/10.png)
+![9](https://github.com/vanle57/flutter-method-channel/blob/main/images/9.png)
 
 #### [Demo source code](https://github.com/vanle57/flutter-method-channel/tree/main/demo%20source%20code/demo_flavor)
 
