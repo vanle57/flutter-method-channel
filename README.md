@@ -344,11 +344,9 @@ Future<void> main() async {
 
 Bây giờ thì run app và xem **kết quả** thôi!
 
-- iOS:
-  ![7](https://github.com/vanle57/flutter-method-channel/blob/main/images/7.png)
-- Android:
-  ![8](https://github.com/vanle57/flutter-method-channel/blob/main/images/8.png)
-
+|     iOS     | ![7](https://github.com/vanle57/flutter-method-channel/blob/main/images/7.png) |
+|-------------|--------------------------------------------------------------------------------|  
+| **Android** | ![8](https://github.com/vanle57/flutter-method-channel/blob/main/images/8.png) |
 
 
 Biến tấu một chút. Giả sử như có 3 cái api url khác nhau cho mỗi flavor thì mình sẽ xử lý như thế nào?
