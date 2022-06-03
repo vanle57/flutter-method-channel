@@ -67,7 +67,10 @@ Nếu chưa biết Flutter Flavor là gì, bạn có thể tham khảo bài vi�
   **Giải thích 1 chút:** **$(APP_FLAVOR)** sẽ tương ứng với biến APP_FLAVOR bạn đã tạo ở bước 1 nhé.
   
   - Cách 2: Thêm dưới dạng source code. Các bạn có thể mở file Info.plist bằng VSCode hoặc click chuột phải vào file Info.plist -> chọn *Open as source code* trên giao diện XCode.
-    ![6](https://github.com/vanle57/flutter-method-channel/blob/main/images/6.png)
+```xml
+<key>AppFlavor</key>
+<string>$(APP_FLAVOR)</string>
+```
 
 - Bước 3: Cấu hình cho FlutterMethodChannel trong AppDelegate
 
@@ -216,11 +219,9 @@ Future<void> main() async {
 
 Bây giờ thì run app và xem **kết quả** thôi!
 
-- iOS:
-  ![7](https://github.com/vanle57/flutter-method-channel/blob/main/images/7.png)
-- Android:
-  ![8](https://github.com/vanle57/flutter-method-channel/blob/main/images/8.png)
-
+|   iOS   | ![7](https://github.com/vanle57/flutter-method-channel/blob/main/images/7.png) |
+| ------- | ------------------------------------------------------------------------------
+| **Android** | ![8](https://github.com/vanle57/flutter-method-channel/blob/main/images/8.png) |
 
 
 Biến tấu một chút. Giả sử như có 3 cái api url khác nhau cho mỗi flavor thì mình sẽ xử lý như thế nào?
