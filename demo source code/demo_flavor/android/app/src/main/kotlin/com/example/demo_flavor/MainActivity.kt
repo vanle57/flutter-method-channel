@@ -1,6 +1,5 @@
 package com.example.demo_flavor
 
-// 1
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -11,17 +10,18 @@ class MainActivity: FlutterActivity() {
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine);
 
-        //2
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "flavor").setMethodCallHandler {
-            // 3
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "demo").setMethodCallHandler {
             call, result -> 
             when (call.method) {
+                "getPackage" -> {
+                    result.success(BuildConfig.APPLICATION_ID)
+                }
+                // Add new case
                 "getFlavor" -> {
                     result.success(BuildConfig.FLAVOR)
                 }
                 else -> result.notImplemented()
             }
-            
         }
     }
 }

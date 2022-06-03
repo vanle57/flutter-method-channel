@@ -1,9 +1,13 @@
 import 'package:demo_flavor/app_flavor.dart';
 import 'package:demo_flavor/flavor_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  final package =
+      await MethodChannel('demo').invokeMethod<String>("getPackage");
+  print(package);
   final appFlavor = await FlavorConfig().getFlavor();
   print(appFlavor?.apiURL);
   runApp(const MyApp());

@@ -5,7 +5,7 @@ class FlavorConfig {
   // 1
   Future<AppFlavor?> getFlavor() async {
     // 2
-    const methodChannel = MethodChannel('flavor');
+    const methodChannel = MethodChannel('demo');
     // 3
     final flavor = await methodChannel.invokeMethod<String>('getFlavor');
     // 4

@@ -11,17 +11,16 @@ import Flutter
       guard let controller = window?.rootViewController as? FlutterViewController else {
           return super.application(application, didFinishLaunchingWithOptions: launchOptions)
       }
-      // 1
-      let flavorChannel = FlutterMethodChannel(name: "flavor", binaryMessenger: controller.binaryMessenger)
-      // 2
+      let flavorChannel = FlutterMethodChannel(name: "demo", binaryMessenger: controller.binaryMessenger)
       flavorChannel.setMethodCallHandler({(call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
           switch call.method {
+          case "getPackage":
+              let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"]
+              result(bundleId)
           case "getFlavor":
-              // 3
               let flavor = Bundle.main.infoDictionary?["AppFlavor"]
               result(flavor)
           default:
-              // 4
               result(FlutterMethodNotImplemented)
           }
       })
