@@ -209,10 +209,10 @@ Nếu chưa biết Flutter Flavor là gì, bạn có thể tham khảo bài vi�
   
   - Cách 2: Thêm dưới dạng source code. Các bạn có thể mở file Info.plist bằng VSCode hoặc click chuột phải vào file Info.plist -> chọn *Open as source code* trên giao diện XCode.
 
-```xml
-<key>AppFlavor</key>
-<string>$(APP_FLAVOR)</string>
-```
+  ```xml
+  <key>AppFlavor</key>
+  <string>$(APP_FLAVOR)</string>
+  ```
 
 
 
@@ -276,7 +276,7 @@ class MainActivity: FlutterActivity() {
                 "getPackage" -> {
                     result.success(BuildConfig.FLAVOR)
                 }
-                // Add new case
+                // NOTE: Add new case
                 "getFlavor" -> {
                     result.success(BuildConfig.FLAVOR)
                 }
@@ -334,6 +334,8 @@ Okay! Tiếp theo là mình sẽ gọi hàm `getFlavor()` của lớp `FlavorCon
 Future<void> main() async {
   // 2
   WidgetsFlutterBinding.ensureInitialized();
+  final package = await MethodChannel('demo').invokeMethod<String>("getPackage");
+  print(package)
   // 3
   await FlavorConfig().getFlavor();
   runApp(const MyApp());
