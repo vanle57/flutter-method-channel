@@ -4,7 +4,7 @@
 
 Bạn có thể đọc thêm về mình và các bài viết trước của mình ở [đây](https://github.com/vanle57).
 
-Sau bài blog tự sự lần trước của mình, hôm nay mình lại quay về 1 vấn đề kỹ thuật khác trong Flutter. Chủ đề là **MethodChannel**. Nó giúp bạn tương tác với từng nền tảng code (_native code_) trong một số trường hợp cần thiết. Đây cũng là một chủ đề quan trọng khi bạn muốn chinh phục Flutter.
+Sau bài blog tự sự lần trước của mình, hôm nay mình lại quay về 1 vấn đề kỹ thuật khác trong Flutter. Chủ đề là **MethodChannel**. Nó giúp bạn tương tác với từng nền tảng code (_native code_) trong một số trường hợp cần thiết. Đây cũng là một chủ đề quan trọng khi bạn muốn chinh phục **Flutter**.
 
 ## 2. Chuẩn bị
 
